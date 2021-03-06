@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src ="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+        <a v-bind:href="url">click me</a>
+</div>
+</body>
+
+<script>
+    <!--编写MVVM的mode部分及VM(ViewModel)部分-->
+    var app = new Vue({
+        el:'#app',
+        data:{
+            url:"https://www.baidu.com",
+        }
+    });
+</script>
+</html>

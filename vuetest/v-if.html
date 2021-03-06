@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>v-if选择指令</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<h4>根据表达式执行的结果的真假,来选择是否要挂载到DOM上</h4>
+<div id="container">
+    <p>{{msg}}</p>
+    <h5>!isMember</h5>
+    <!-- if执行结果是真显示 -->
+    <p v-if="!isMember">仅会员可见</p>
+    <h5>isMember</h5>
+    <p v-if="isMember">仅会员可见</p>
+    <ul>
+        <li v-if="answer=='a'">A</li>
+        <li v-else-if="answer=='b'">B</li>
+        <li v-else-if="answer=='c'">C</li>
+        <li v-else>D</li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el:"#container",
+        data:{
+            msg:"Hello VueJs",
+            isMember:false,
+            answer:"a"
+        },
+        //        方法
+        created:function(){
+            console.log("vue的实例创建完成");
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src ="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- v-text 可以解决差值表达式闪烁的问题-->
+
+    <span v-text="name"></span>
+    <!-- 相当于MVVM的view   -->
+
+    <input type="text" v-model="num1">+
+    <input type="text" v-model="num2">=
+    <!--{{Number.parseInt(num1)+Number.parseInt(num2)}}-->
+    <span v-text="Number.parseInt(num1)+Number.parseInt(num2)"> </span>
+
+    <button>计算</button>
+</div>
+</body>
+
+<script>
+    <!--编写MVVM的mode部分及VM(ViewModel)部分-->
+    var VM = new Vue({
+        el:"#app", //VM 接管了app区域的管理
+        data:{
+            name:"传智播客",
+            num1:1,
+            num2:1
+        }
+    })
+</script>
+</html>
