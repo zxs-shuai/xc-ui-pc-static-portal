@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src ="src/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{name}}   <!-- 相当于MVVM的view   -->
+       <input type="text" v-model="num1">+
+        <input type="text" v-model="num2">=
+        <span v-text="result"> </span>
+
+        <button  v-on:click="changed">计算</button>
+    </div>
+</body>
+</html>
